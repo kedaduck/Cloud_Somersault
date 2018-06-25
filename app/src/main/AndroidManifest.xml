@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.leoren.liehu">
+
+    <!--允许程序打开网络套接字-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--允许程序获取网络状态-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!--允许程序获取网络状态-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!--允许程序访问CellID或WiFi热点来获取粗略的位置-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!--允许程序读写手机状态和身份-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/login"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- 高德引用 -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="734a9b7e3bb4af3f5582a868f3b525a0" >
+        </meta-data>
+
+        <activity android:name=".Activity.loginandregister.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1106857408" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity android:name=".Activity.loginandregister.Register" />
+        <activity android:name=".Activity.loginandregister.Register_tel" />
+        <activity android:name=".Activity.PersonActivity" />
+        <activity android:name=".Activity.MainFunction" />
+        <activity android:name=".Activity.MainFunctionView.FoodFragment" />
+        <activity android:name=".Activity.MainFunctionView.ExeciseFragment" />
+        <activity android:name=".Activity.MainFunctionView.FriendsFragment" />
+        <activity android:name=".Activity.MainFunctionView.HappyFragment" />
+        <activity android:name=".Activity.MainFunctionView.FoodView.Mybody" />
+        <activity android:name=".Activity.MainFunctionView.FoodView.Myplan" />
+        <activity android:name=".Activity.MainFunctionView.FoodView.Breakfast" />
+        <activity android:name=".Activity.MainFunctionView.FoodView.Lunch" />
+        <activity android:name=".Activity.MainFunctionView.FoodView.Dinner" />
+        <activity android:name=".Activity.MainFunctionView.ExeciseView.Run" />
+        <activity android:name=".Activity.MainFunctionView.ExeciseView.Walk" />
+        <activity android:name=".Activity.MainFunctionView.ExeciseView.Bike" />
+
+        <!-- 小米登录时跳转页面 -->
+
+        <activity
+            android:name=".Activity.loginandregister.xiaomi.CustomizedAuthorizedActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity android:name=".Activity.loginandregister.xiaomi.MiLoginActivity" />
+        <activity android:name=".Activity.loginandregister.ForgetSecret" />
+        <activity android:name=".Activity.loginandregister.ResetSecret" />
+
+        <!-- 华为登录透明页面和数据 和提供器 -->
+        <meta-data
+            android:name="com.huawei.hms.client.appid"
+            android:value="appid=100287641" />
+
+        <activity
+            android:name="com.huawei.hms.activity.BridgeActivity"
+            android:configChanges="orientation|locale|screenSize|layoutDirection|fontScale"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:hardwareAccelerated="true"
+            android:theme="@android:style/Theme.Translucent">
+            <meta-data
+                android:name="hwc-theme"
+                android:value="androidhwext:style/Theme.Emui.Translucent" />
+        </activity>
+
+        <provider
+            android:name="com.huawei.hms.update.provider.UpdateProvider"
+            android:authorities="com.huawei.hmssample.hms.update.provider"
+            android:exported="false"
+            android:grantUriPermissions="true" />
+
+        <activity android:name=".Activity.MainFunctionView.ExeciseView.Exercise" />
+        <activity android:name=".Activity.MainFunctionView.HappyView.LittleGame" />
+        <activity android:name=".Activity.MainFunctionView.HappyView.LittleVideo" />
+        <activity android:name=".Activity.MainFunctionView.HappyView.MyAttention" />
+        <activity android:name=".Activity.MainFunctionView.HappyView.LittleEasy" />
+        <activity
+            android:name=".Activity.MainFunctionView.HappyView.NormalVideo.PlayNormalVideo"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Activity.MainFunctionView.FoodView.BodyData.BodyShapeChangeActivity" />
+        <activity android:name=".Activity.MainFunctionView.FoodView.BodyData.HeightDataActivity" />
+        <activity android:name=".Activity.MainFunctionView.FoodView.BodyData.WeightDataActivity" />
+        <activity android:name=".Activity.MainFunctionView.FoodView.BodyData.BustDataActivity" />
+        <activity android:name=".Activity.MainFunctionView.FoodView.BodyData.WaistDataActivity" />
+        <activity android:name=".Activity.MainFunctionView.FoodView.BodyData.HipDataActivity" />
+        <activity android:name=".Activity.MainFunctionView.FoodView.BodyData.FatrateDataActivity" />
+        <activity android:name=".Activity.MainFunctionView.FoodView.BodyData.MuscleDataActivity" />
+        <activity android:name=".Activity.MainFunctionView.FoodView.PlanActivity.DeclineFatActivity1" />
+        <activity android:name=".Activity.MainFunctionView.FoodView.PlanActivity.AddMuscleActivity1" />
+        <activity android:name=".Activity.MainFunctionView.FoodView.PlanActivity.AddMuscleActivity2" />
+        <activity android:name=".Activity.MainFunctionView.FoodView.PlanActivity.AddMuscleActivity3" />
+        <activity android:name=".Activity.MainFunctionView.FoodView.PlanActivity.DeclineFatActivity2" />
+        <activity android:name=".Activity.MainFunctionView.FoodView.PlanActivity.DeclineFatActivity3" />
+        <activity android:name=".Activity.MainFunctionView.FoodView.SelectFoodKindActivity" />
+        <activity android:name=".Activity.MainFunctionView.ExeciseView.WalkActivity" />
+        <activity android:name=".Activity.MainFunctionView.ExeciseView.BikeActivity" />
+        <activity android:name=".Activity.MainFunctionView.ExeciseView.ExerciseActivity"></activity>
+
+        <!-- 高德地图服务 -->
+        <service android:name="com.amap.api.location.APSService"></service>
+
+
+    </application>
+
+</manifest>

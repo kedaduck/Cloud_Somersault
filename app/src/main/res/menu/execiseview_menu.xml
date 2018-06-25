@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/execise_menu_scancode"
+        android:title="扫一扫"
+        android:icon="@drawable/scan_icon"/>
+
+    <item
+        android:id="@+id/exerceise_menu_clock"
+        android:title="设置闹钟"
+        android:icon="@drawable/clock_icon"/>
+
+
+
+
+</menu>

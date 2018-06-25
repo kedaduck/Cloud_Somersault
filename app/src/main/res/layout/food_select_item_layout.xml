@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/food_item_select_layout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="52dp"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        >
+
+        <TextView
+            android:id="@+id/item_food_name_tv"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:textColor="@color/dark"
+            android:textSize="15sp"
+            android:text="食物名称"
+            android:gravity="bottom"
+            android:paddingBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:maxLines="1"/>
+
+        <RelativeLayout
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp">
+
+            <ImageButton
+                android:id="@+id/remove_item_food_btn"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:background="@color/white"
+                android:src="@drawable/remove_food"/>
+
+
+            <TextView
+                android:id="@+id/item_food_weight_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="0"
+                android:textSize="14sp"
+                android:layout_centerInParent="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="g"
+                android:layout_toRightOf="@id/item_food_weight_text"/>
+
+            <ImageButton
+                android:id="@+id/add_item_food_btn"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:background="@color/white"
+                android:src="@drawable/add_food"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/gray"/>
+
+</LinearLayout>

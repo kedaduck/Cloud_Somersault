@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/friends_page_color"
+    tools:context=".Activity.MainFunctionView.FriendsFragment">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/friends_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/friends_page_color"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/fri_head"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/head_icon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/friends"
+            android:textSize="20sp"
+            android:textColor="@color/move_btn_unselect"
+            android:layout_gravity="center"/>
+
+        <ImageButton
+            android:id="@+id/friend_menu"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/menu_icon"
+            android:layout_gravity="right"
+            android:background="@color/friends_page_color"
+            android:layout_marginRight="15dp"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <include layout="@layout/acticvity_search"/>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/friends_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"
+        android:background="@color/white">
+
+
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>
